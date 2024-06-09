@@ -1,0 +1,8 @@
+﻿  Application.cpp
+  Display.cpp
+  Game.cpp
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\launcher\Game.cpp(27,28): warning C4309: 'argument': truncation of constant value
+  MenuState.cpp
+  Tilemap.cpp
+  Generating Code...
+  Dungeon-Adventure.vcxproj -> C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\bin\Dungeon-Adventure\Debug-x64\Dungeon-Adventure.exe

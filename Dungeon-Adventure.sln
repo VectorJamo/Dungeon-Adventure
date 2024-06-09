@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dungeon-Adventure", "Dungeon-Adventure\Dungeon-Adventure.vcxproj", "{3B0E4BC8-863F-4276-B9C1-DB9766E2ECFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B0E4BC8-863F-4276-B9C1-DB9766E2ECFC}.Debug|x64.ActiveCfg = Debug|x64
+		{3B0E4BC8-863F-4276-B9C1-DB9766E2ECFC}.Debug|x64.Build.0 = Debug|x64
+		{3B0E4BC8-863F-4276-B9C1-DB9766E2ECFC}.Debug|x86.ActiveCfg = Debug|Win32
+		{3B0E4BC8-863F-4276-B9C1-DB9766E2ECFC}.Debug|x86.Build.0 = Debug|Win32
+		{3B0E4BC8-863F-4276-B9C1-DB9766E2ECFC}.Release|x64.ActiveCfg = Release|x64
+		{3B0E4BC8-863F-4276-B9C1-DB9766E2ECFC}.Release|x64.Build.0 = Release|x64
+		{3B0E4BC8-863F-4276-B9C1-DB9766E2ECFC}.Release|x86.ActiveCfg = Release|Win32
+		{3B0E4BC8-863F-4276-B9C1-DB9766E2ECFC}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B9A3E13-C042-4822-9D2E-FF63CB09ECA3}
+	EndGlobalSection
+EndGlobal
