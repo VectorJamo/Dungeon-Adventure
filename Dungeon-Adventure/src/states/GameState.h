@@ -3,7 +3,6 @@
 
 class GameState: public StateManager {
 private:
-	int x;
 
 public:
 	GameState(SDL_Renderer* renderer, bool* gameStatus);

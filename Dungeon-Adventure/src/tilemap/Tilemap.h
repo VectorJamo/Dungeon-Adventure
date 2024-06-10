@@ -23,7 +23,7 @@ public:
 	void tick();
 	void render(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight);
 
-	inline unsigned char** getTileMap() { return _tileMap; } // Cast this return type to unsigned char** to access the values.
+	inline unsigned char** getTileMap() { return _tileMap; }
 	inline static int getTileSize() { return _tileSize; }
 	inline static int getMapRows() { return _mapRows; }
 	inline static int getMapCols() { return _mapCols; }

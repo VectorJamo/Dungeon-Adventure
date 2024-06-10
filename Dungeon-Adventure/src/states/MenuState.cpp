@@ -31,7 +31,7 @@ _quitButton(nullptr) {
 	_versionText->setPosition(_gameText->getXPos() + _gameText->getWidth(), _gameText->getYPos());
 
 	_copyrightText = new Label(0, 0, "Copyright (C) Suraj Neupane", _fontSmallLight, _renderer);
-	_copyrightText->setPosition(Display::getWidth() - _copyrightText->getWidth() - 10, Display::getHeight() - _copyrightText->getHeight() - 5);
+	_copyrightText->setPosition(Display::getWidth() - _copyrightText->getWidth() - 15, Display::getHeight() - _copyrightText->getHeight() - 10);
 
 	// Buttons
 	_playButton = new Button(0, 0, "Play", _fontMedium, _renderer);

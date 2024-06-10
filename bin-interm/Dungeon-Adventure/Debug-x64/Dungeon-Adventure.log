@@ -1,7 +1,7 @@
 ﻿  Application.cpp
-  GUI_Manager.cpp
   Game.cpp
 C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\launcher\Game.cpp(29,28): warning C4309: 'argument': truncation of constant value
+  GameState.cpp
   MenuState.cpp
 C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(40,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(41,46): warning C4309: 'argument': truncation of constant value
