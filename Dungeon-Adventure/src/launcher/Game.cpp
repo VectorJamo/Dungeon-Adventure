@@ -1,16 +1,16 @@
 #include "Game.h"
 
+#include "../gui/GUI_Manager.h"
+
 bool Game::running;
 Game::Game(int width, int height, const char* title) {
 	_display = new Display(width, height, title);
 	running = true;
 
-	_activeState = new MenuState(_display->getRendererInstance());
+	StateManager::SetCurrentState(new MenuState(_display->getRendererInstance(), &running));
 }
 
 Game::~Game() {
-	delete _activeState;
-
 	delete _display;
 }
 
@@ -22,16 +22,17 @@ void Game::run() {
 		while (SDL_PollEvent(&ev)) {
 			if (ev.type == SDL_QUIT)
 				running = false;
+
+			gui::GUI_Manager::Update(ev);
 		}
 
 		_display->clear(0, 0, 0, 255);
 
-		_activeState->tick();
-
-		_activeState->render();
+		StateManager::GetCurrentState()->tick();
+		StateManager::GetCurrentState()->render();
 
 		_display->show();
 
-		_activeState->limitFps(lastTime, 60);
+		StateManager::GetCurrentState()->limitFps(lastTime, 60);
 	}
 }

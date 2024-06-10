@@ -16,6 +16,6 @@ namespace gui {
 
 		static void AddButtonsToTrack(Button* button);
 		static void AddTextFieldsToTrack(TextField* textField);
-		static void ClearAllButtons();
+		static void ClearAll();
 	};
 }

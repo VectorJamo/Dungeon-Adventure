@@ -1,8 +1,31 @@
 ﻿  Application.cpp
-  Display.cpp
+  GUI_Manager.cpp
   Game.cpp
-C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\launcher\Game.cpp(27,28): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\launcher\Game.cpp(29,28): warning C4309: 'argument': truncation of constant value
   MenuState.cpp
-  Tilemap.cpp
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(40,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(41,46): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(47,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(48,46): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(75,44): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(75,39): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(75,34): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(75,29): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(76,34): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(79,38): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(80,40): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(80,35): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(80,30): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(80,25): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(83,44): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(83,39): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(83,34): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(83,29): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(84,34): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(87,38): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(88,40): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(88,35): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(88,30): warning C4309: 'argument': truncation of constant value
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\MenuState.cpp(88,25): warning C4309: 'argument': truncation of constant value
   Generating Code...
   Dungeon-Adventure.vcxproj -> C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\bin\Dungeon-Adventure\Debug-x64\Dungeon-Adventure.exe

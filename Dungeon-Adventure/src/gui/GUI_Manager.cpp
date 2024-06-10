@@ -15,8 +15,9 @@ void gui::GUI_Manager::AddTextFieldsToTrack(TextField* textField) {
 	_textFields.push_back(textField);
 }
 
-void gui::GUI_Manager::ClearAllButtons() {
+void gui::GUI_Manager::ClearAll() {
 	_buttons.clear();
+	_textFields.clear();
 }
 
 void gui::GUI_Manager::Update(SDL_Event& ev) {

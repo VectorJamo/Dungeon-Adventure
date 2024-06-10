@@ -2,7 +2,7 @@
 
 #include "GameState.h"
 
-GameState::GameState(SDL_Renderer* renderer): StateManager(renderer) {
+GameState::GameState(SDL_Renderer* renderer,  bool* gameStatus): StateManager(renderer, gameStatus) {
 	x = 0;
 }
 

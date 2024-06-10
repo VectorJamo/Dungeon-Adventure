@@ -9,8 +9,6 @@ class Game {
 private:
 	Display* _display;
 
-	StateManager* _activeState;
-	
 public:
 	static bool running;
 
