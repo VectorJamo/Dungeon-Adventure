@@ -6,18 +6,19 @@
 class Tilemap {
 private:
 	SDL_Renderer* _renderer;
-	static int _mapCols, _mapRows;
-	static int _tileSize;
+	static const int _mapCols = 100, _mapRows = 100;
+	static const int _tileSize = 64;
 
 	unsigned char** _tileMap;
 
-	SDL_Texture* _mapSprite;
+	// Tile assets
+	SDL_Texture* _wall, *_floor;
 
 private:
 	void loadTileMap(const char* filePath);
 
 public:
-	Tilemap(const char* mapPath, const char* spritePath, int mapRows, int mapCols, int tileSize, SDL_Renderer* renderer);
+	Tilemap(const char* mapPath, SDL_Renderer* renderer);
 	~Tilemap();
 
 	void tick();

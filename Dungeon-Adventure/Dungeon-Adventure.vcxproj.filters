@@ -54,6 +54,9 @@
     <ClCompile Include="src\states\MenuState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\items\Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\gui\Button.h">
@@ -95,9 +98,13 @@
     <ClInclude Include="src\states\MenuState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\items\Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="res\fonts\roboto\NOTICE.txt" />
+    <Text Include="res\maps\world.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="res\fonts\roboto\Roboto_Specimen_Book.pdf" />
@@ -119,5 +126,136 @@
     <Font Include="res\fonts\roboto\Roboto-Regular.ttf" />
     <Font Include="res\fonts\roboto\Roboto-Thin.ttf" />
     <Font Include="res\fonts\roboto\Roboto-ThinItalic.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\images\tiles\1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\5.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\6.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\7.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\8.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\9.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\10.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\11.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\12.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\13.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\14.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\15.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\16.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\17.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\18.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\19.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\20.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\21.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\22.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\23.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\25.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\26.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\27.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\28.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\29.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\30.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\31.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\32.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\33.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\34.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\35.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\36.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\37.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\tileset.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\explosion.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\roach.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\Soldier-Blue.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\Soldier-Red.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\floor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

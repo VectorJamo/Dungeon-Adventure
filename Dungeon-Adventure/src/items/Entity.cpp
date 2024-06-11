@@ -3,12 +3,16 @@
 #include "Entity.h"
 #include "../utils/Macros.h"
 
+#include "../tilemap/Tilemap.h"
+
 SDL_Renderer* Entity::_renderer;
 Entity::Entity(int x, int y, int width, int height, const char* path, SDL_Renderer* renderer): _x(x), _y(y), _width(width),
 _height(height), _entityImage(nullptr){
 
 	_renderer = renderer;
 	_currentClipRect = { 0, 0, 0, 0 };
+	_collideRect = _currentClipRect;
+
 	_directions[0] = 'L';
 	_directions[1] = 'R';
 	_directions[2] = 'U';
@@ -75,3 +79,38 @@ void Entity::playDirectionAnimation() {
 		_currentClipRect = _downAnimationRects[_currentFrame];
 	}
 }
+
+CollisionAxes Entity::checkCollision(Tilemap* tileMap, int& dx, int& dy) {
+	CollisionAxes type;
+
+	for (int i = 0; i < tileMap->getMapRows(); i++) {
+		for (int j = 0; j < tileMap->getMapCols(); j++) {
+
+			unsigned char** tiles = tileMap->getTileMap();
+
+			if (tiles[i][j] == '1') {
+				int tileX = j * tileMap->getTileSize();
+				int tileY = i * tileMap->getTileSize();
+
+				// First set the player's X to the new X and check if collision occurs,
+				float entityXNew = (getXPos() + _collideRect.x) + dx;
+				if (!(entityXNew > tileX + tileMap->getTileSize() || entityXNew + (_collideRect.w) < tileX || (getYPos() + _collideRect.y) + _collideRect.h < tileY ||
+					getYPos() + _collideRect.y > tileY + tileMap->getTileSize())) {
+					type.xCollision = true;
+				}
+				// Then, set the player's Y to the new Y and check if collision occurs
+				float entityYNew = (getYPos() + _collideRect.y) + dy;
+				if (!(getXPos() + _collideRect.x > tileX + tileMap->getTileSize() || (getXPos() + _collideRect.x) + _collideRect.w < tileX ||
+					(entityYNew + _collideRect.h) < tileY || entityYNew > tileY + tileMap->getTileSize())) {
+					type.yCollision = true;
+				}
+			}
+		}
+	}
+	return type;
+}
+
+CollisionAxes Entity::checkCollision(const Entity& another, int& dx, int& dy) {
+	return CollisionAxes();
+}
+
