@@ -19,7 +19,7 @@ _height(height), _objectImage(nullptr), _animationClipRects(nullptr) {
 	SDL_QueryTexture(_objectImage, NULL, NULL, &_currentClipRect.w, &_currentClipRect.h);
 
 	_animationCounter = 0;
-	_animationSpeed = 1; // Default animation speed for all game objects. Can change using the animation speed setter function.
+	_animationSpeed = 3; // Default animation speed for all game objects. Can change using the animation speed setter function.
 	_maxFrames = 0;
 	_currentFrame = 0;
 }

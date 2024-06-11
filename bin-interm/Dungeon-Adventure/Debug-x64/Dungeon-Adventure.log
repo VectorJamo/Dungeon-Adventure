@@ -1,2 +1,17 @@
-﻿  Player.cpp
-  Dungeon-Adventure.vcxproj -> C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\Dungeon-Adventure\bin\Dungeon-Adventure\Debug-x64\Dungeon-Adventure.exe
+﻿  Tilemap.cpp
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\effects\Light.h(2,8): warning C4099: 'LightEmitter': type name first seen using 'class' now seen using 'struct'
+  (compiling source file 'src/tilemap/Tilemap.cpp')
+  C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\effects\Light.h(2,8):
+  see declaration of 'LightEmitter'
+  
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\tilemap\Tilemap.cpp(63,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\tilemap\Tilemap.cpp(66,48): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\tilemap\Tilemap.cpp(78,36): warning C4244: 'argument': conversion from 'float' to 'Uint8', possible loss of data
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\tilemap\Tilemap.cpp(82,37): warning C4244: 'argument': conversion from 'float' to 'Uint8', possible loss of data
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\tilemap\Tilemap.cpp(107,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\tilemap\Tilemap.cpp(108,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\tilemap\Tilemap.cpp(115,20): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\tilemap\Tilemap.cpp(115,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\tilemap\Tilemap.cpp(115,39): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\tilemap\Tilemap.cpp(115,39): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Dungeon-Adventure.vcxproj -> C:\Users\nsura\OneDrive\Desktop\C++ Projects\Dungeon-Adventure\bin\Dungeon-Adventure\Debug-x64\Dungeon-Adventure.exe

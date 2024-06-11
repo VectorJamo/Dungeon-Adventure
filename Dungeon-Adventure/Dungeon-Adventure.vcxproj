@@ -148,8 +148,10 @@
     <ClCompile Include="src\states\GameState.cpp" />
     <ClCompile Include="src\states\StateManager.cpp" />
     <ClCompile Include="src\tilemap\Tilemap.cpp" />
+    <ClCompile Include="src\items\Torch.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\effects\Light.h" />
     <ClInclude Include="src\items\Player.h" />
     <ClInclude Include="src\states\MenuState.h" />
     <ClInclude Include="src\gui\Button.h" />
@@ -164,6 +166,7 @@
     <ClInclude Include="src\states\StateManager.h" />
     <ClInclude Include="src\tilemap\Tilemap.h" />
     <ClInclude Include="src\utils\Macros.h" />
+    <ClInclude Include="src\items\Torch.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="res\fonts\roboto\NOTICE.txt" />
@@ -234,6 +237,11 @@
     <Image Include="res\images\tiles\9.png" />
     <Image Include="res\images\tiles\floor.png" />
     <Image Include="res\images\tiles\tileset.png" />
+    <Image Include="res\images\tiles\torch-sprite.png" />
+    <Image Include="res\images\tiles\torch.png" />
+    <Image Include="res\images\tiles\torch2.png" />
+    <Image Include="res\images\tiles\wall.png" />
+    <Image Include="res\images\tiles\wall2.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

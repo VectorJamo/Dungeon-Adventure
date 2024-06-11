@@ -57,6 +57,9 @@
     <ClCompile Include="src\items\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\items\Torch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\gui\Button.h">
@@ -99,6 +102,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\items\Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\items\Torch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\effects\Light.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -255,6 +264,21 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="res\images\tiles\floor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\torch-sprite.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\torch2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\torch.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\wall.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\tiles\wall2.jpg">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

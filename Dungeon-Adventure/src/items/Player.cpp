@@ -8,10 +8,37 @@ Player::Player(int x, int y, int width, int height, const char* path, SDL_Render
 	_tileMap = tileMap;
 	_dx = 0;
 	_dy = 0;
-	_speed = 3;
+	_speed = 4;
 
 	_currentClipRect = { 0, 0, 32, 32 };
 	_collideRect = { 16, 16, 32, 32 };
+
+	_leftAnimationRects = new SDL_Rect[4];
+	_rightAnimationRects = new SDL_Rect[4];
+	_upAnimationRects = new SDL_Rect[4];
+	_downAnimationRects = new SDL_Rect[4];
+
+	_downAnimationRects[0] = { 0, 0, 32, 32 };
+	_downAnimationRects[1] = { 32, 0, 32, 32 };
+	_downAnimationRects[2] = { 32 * 2, 0, 32, 32 };
+	_downAnimationRects[3] = { 32 * 3, 0, 32, 32 };
+
+	_rightAnimationRects[0] = { 0, 32 * 2, 32, 32 };
+	_rightAnimationRects[1] = { 32, 32 * 2, 32, 32 };
+	_rightAnimationRects[2] = { 32 * 2, 32 * 2, 32, 32 };
+	_rightAnimationRects[3] = { 32 * 3, 32 * 2, 32, 32 };
+
+	_upAnimationRects[0] = { 0, 32 * 4, 32, 32 };
+	_upAnimationRects[1] = { 32, 32 * 4, 32, 32 };
+	_upAnimationRects[2] = { 32 * 2, 32 * 4, 32, 32 };
+	_upAnimationRects[3] = { 32 * 3, 32 * 4, 32, 32 };
+
+	_leftAnimationRects[0] = { 0, 32 * 6, 32, 32 };
+	_leftAnimationRects[1] = { 32, 32 * 6, 32, 32 };
+	_leftAnimationRects[2] = { 32 * 2, 32 * 6, 32, 32 };
+	_leftAnimationRects[3] = { 32 * 3, 32 * 6, 32, 32 };
+
+	_maxFrames = 4;
 }
 
 Player::~Player() {
@@ -22,15 +49,23 @@ void Player::tick() {
 
 	if (keyState[SDL_SCANCODE_A]) {
 		_dx = -_speed;
+		_currentDirection = 'L';
+		playDirectionAnimation();
 	}
-	if (keyState[SDL_SCANCODE_D]) {
+	else if (keyState[SDL_SCANCODE_D]) {
 		_dx = _speed;
+		_currentDirection = 'R';
+		playDirectionAnimation();
 	}
-	if (keyState[SDL_SCANCODE_W]) {
+	else if (keyState[SDL_SCANCODE_W]) {
 		_dy = -_speed;
+		_currentDirection = 'U';
+		playDirectionAnimation();
 	}
-	if (keyState[SDL_SCANCODE_S]) {
+	else if (keyState[SDL_SCANCODE_S]) {
 		_dy = _speed;
+		_currentDirection = 'D';
+		playDirectionAnimation();
 	}
 	// TODO: check collision
 	CollisionAxes axes = checkCollision(_tileMap, _dx, _dy);
@@ -52,4 +87,6 @@ void Player::render(const int& playerX, const int& playerY, const int& playerWid
 	// Reset
 	_dx = 0;
 	_dy = 0;
+	_currentDirection = 'X';
+	_currentClipRect = _downAnimationRects[0];
 }

@@ -2,6 +2,9 @@
 
 #include <SDL.h>
 #include <SDL_image.h>
+#include <vector>
+
+class LightEmitter;
 
 class Tilemap {
 private:
@@ -22,7 +25,7 @@ public:
 	~Tilemap();
 
 	void tick();
-	void render(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight);
+	void render(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight, const std::vector<LightEmitter*>& lightEmitters);
 
 	inline unsigned char** getTileMap() { return _tileMap; }
 	inline static int getTileSize() { return _tileSize; }
