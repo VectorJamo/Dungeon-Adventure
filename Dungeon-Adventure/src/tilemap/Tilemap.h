@@ -26,6 +26,7 @@ public:
 
 	void tick();
 	void render(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight, const std::vector<LightEmitter*>& lightEmitters);
+	void renderMinimap(int playerWorldX, int playerWorldY);
 
 	inline unsigned char** getTileMap() { return _tileMap; }
 	inline static int getTileSize() { return _tileSize; }

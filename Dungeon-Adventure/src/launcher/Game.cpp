@@ -24,6 +24,8 @@ void Game::run() {
 				running = false;
 
 			gui::GUI_Manager::Update(ev);
+
+			StateManager::GetCurrentState()->handleInput(ev);
 		}
 
 		_display->clear(0, 0, 0, 255);

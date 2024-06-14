@@ -13,6 +13,7 @@ public:
 
 	virtual void tick() = 0;
 	virtual void render() = 0;
+	virtual void handleInput(SDL_Event& ev) = 0;
 
 	static void SetCurrentState(StateManager* state);
 

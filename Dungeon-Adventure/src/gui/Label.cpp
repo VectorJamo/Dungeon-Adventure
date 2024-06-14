@@ -13,7 +13,6 @@ namespace gui {
 		TTF_CloseFont(_font);
 	}
 
-
 	SDL_Renderer* Label::_renderer;
 	Label::Label(int x, int y, const char* text, Font* font, SDL_Renderer* renderer) : _x(x), _y(y), _width(0),
 		_height(0), _labelTexture(nullptr), _text(text), _font(font) {

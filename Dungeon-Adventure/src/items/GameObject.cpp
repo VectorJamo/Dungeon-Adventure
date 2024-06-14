@@ -4,8 +4,8 @@
 #include "../utils/Macros.h"
 
 SDL_Renderer* GameObject::_renderer;
-GameObject::GameObject(int x, int y, int width, int height, const char* path, SDL_Renderer* renderer): _x(x), _y(y), _width(width),
-_height(height), _objectImage(nullptr), _animationClipRects(nullptr) {
+GameObject::GameObject(int x, int y, int width, int height, const char* path, SDL_Renderer* renderer, const char* objectName): _x(x), _y(y), _width(width),
+_height(height), _objectImage(nullptr), _animationClipRects(nullptr), objectName(objectName) {
 
 	_renderer = renderer;
 	_currentClipRect = { 0, 0, 0, 0 };
@@ -49,4 +49,20 @@ void GameObject::setAnimationClipRects(SDL_Rect* animationClipRects, int frames)
 
 void GameObject::setAnimationSpeed(int animationSpeed) {
 	_animationSpeed = animationSpeed;
+}
+
+int GameObject::getXPos() const {
+	return _x;
+}
+
+int GameObject::getYPos() const {
+	return _y;
+}
+
+int GameObject::getWidth() const {
+	return _width;
+}
+
+int GameObject::getHeight() const {
+	return _height;
 }

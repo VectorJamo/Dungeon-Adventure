@@ -134,6 +134,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\items\Cockroach.cpp" />
+    <ClCompile Include="src\items\Spike.cpp" />
+    <ClCompile Include="src\items\PickupMap.cpp" />
     <ClCompile Include="src\items\Player.cpp" />
     <ClCompile Include="src\states\MenuState.cpp" />
     <ClCompile Include="src\Application.cpp" />
@@ -149,8 +152,13 @@
     <ClCompile Include="src\states\StateManager.cpp" />
     <ClCompile Include="src\tilemap\Tilemap.cpp" />
     <ClCompile Include="src\items\Torch.cpp" />
+    <ClCompile Include="src\gui\TempText.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\items\Cockroach.h" />
+    <ClInclude Include="src\items\Spike.h" />
+    <ClInclude Include="src\items\InventoryItem.h" />
+    <ClInclude Include="src\items\PickupMap.h" />
     <ClInclude Include="src\effects\Light.h" />
     <ClInclude Include="src\items\Player.h" />
     <ClInclude Include="src\states\MenuState.h" />
@@ -167,6 +175,7 @@
     <ClInclude Include="src\tilemap\Tilemap.h" />
     <ClInclude Include="src\utils\Macros.h" />
     <ClInclude Include="src\items\Torch.h" />
+    <ClInclude Include="src\gui\TempText.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="res\fonts\roboto\NOTICE.txt" />
@@ -195,9 +204,20 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\images\explosion.png" />
+    <Image Include="res\images\health\0.png" />
+    <Image Include="res\images\health\1.png" />
+    <Image Include="res\images\health\2.png" />
+    <Image Include="res\images\health\3.png" />
+    <Image Include="res\images\health\4.png" />
+    <Image Include="res\images\health\5.png" />
+    <Image Include="res\images\health\6.png" />
+    <Image Include="res\images\map.png" />
+    <Image Include="res\images\roach-attacked.png" />
     <Image Include="res\images\roach.png" />
     <Image Include="res\images\Soldier-Blue.png" />
     <Image Include="res\images\Soldier-Red.png" />
+    <Image Include="res\images\spike-animation.png" />
+    <Image Include="res\images\spike-sprite.png" />
     <Image Include="res\images\tiles\1.png" />
     <Image Include="res\images\tiles\10.png" />
     <Image Include="res\images\tiles\11.png" />

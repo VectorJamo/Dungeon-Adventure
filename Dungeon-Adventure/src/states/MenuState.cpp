@@ -109,3 +109,6 @@ void MenuState::render() {
 	_playButton->render();
 	_quitButton->render();
 }
+
+void MenuState::handleInput(SDL_Event& ev) {
+}

@@ -31,5 +31,6 @@ public:
 
 	void tick() override;
 	void render() override;
+	void handleInput(SDL_Event& ev) override;
 };
 

@@ -1,5 +1,6 @@
 #pragma once
-struct LightEmitter {
+class LightEmitter {
+public:
 	int lightPosY, lightPosX;
 	int intensityMultiplier;
 };

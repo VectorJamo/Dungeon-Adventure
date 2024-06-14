@@ -3,10 +3,14 @@
 
 std::vector<gui::Button*> gui::GUI_Manager::_buttons;
 std::vector<gui::TextField*> gui::GUI_Manager::_textFields;
+std::vector<gui::TempText*> gui::GUI_Manager::_activeTempTexts;
+
 int gui::GUI_Manager::mouseX;
 int gui::GUI_Manager::mouseY;
+
 bool gui::GUI_Manager::isShiftHold = false;
 bool gui::GUI_Manager::isCapsOn = false;
+
 void gui::GUI_Manager::AddButtonsToTrack(Button* button) {
 	_buttons.push_back(button);
 }
@@ -18,6 +22,30 @@ void gui::GUI_Manager::AddTextFieldsToTrack(TextField* textField) {
 void gui::GUI_Manager::ClearAll() {
 	_buttons.clear();
 	_textFields.clear();
+}
+
+void gui::GUI_Manager::AddTempText(int x, int y, const char* text, Font* font, int maxAge, SDL_Renderer* renderer) {
+	TempText* tempText = new TempText(x, y, text, font, maxAge, renderer);
+	_activeTempTexts.push_back(tempText);
+}
+
+void gui::GUI_Manager::UpdateTempTexts() {
+	for (int i = 0; i < _activeTempTexts.size(); i++) {
+		_activeTempTexts[i]->tick();
+
+		if (_activeTempTexts[i]->currentAge > _activeTempTexts[i]->maxAge) {
+			delete _activeTempTexts[i];
+
+			_activeTempTexts.erase(_activeTempTexts.begin() + i);
+			i--;
+		}
+	}
+}
+
+void gui::GUI_Manager::RenderTempTexts(){
+	for (int i = 0; i < _activeTempTexts.size(); i++) {
+		_activeTempTexts[i]->render();
+	}
 }
 
 void gui::GUI_Manager::Update(SDL_Event& ev) {

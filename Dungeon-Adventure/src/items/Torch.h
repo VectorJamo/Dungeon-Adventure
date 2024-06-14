@@ -8,9 +8,9 @@ private:
 	SDL_Rect* _clipRects;
 
 public:
-	Torch(int x, int y, int width, int height, const char* path, SDL_Renderer* renderer);
+	Torch(int x, int y, int width, int height, const char* path, SDL_Renderer* renderer, const char* objectName);
 	~Torch();
 
-	void tick() override;
-	void render(const int& playerX, const int& playerY, const int& playerWidth, const int& playerHeight) override;
+	void tick();
+	void render(const int& playerX, const int& playerY, const int& playerWidth, const int& playerHeight);
 };

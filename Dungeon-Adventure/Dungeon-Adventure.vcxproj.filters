@@ -60,6 +60,18 @@
     <ClCompile Include="src\items\Torch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\items\PickupMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\TempText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\items\Spike.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\items\Cockroach.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\gui\Button.h">
@@ -108,6 +120,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\effects\Light.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\items\PickupMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\items\InventoryItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\TempText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\items\Spike.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\items\Cockroach.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -279,6 +306,39 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="res\images\tiles\wall2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\map.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\health\0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\health\1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\health\2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\health\3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\health\4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\health\5.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\health\6.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\spike-animation.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\spike-sprite.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\roach-attacked.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

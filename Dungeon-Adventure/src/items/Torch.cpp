@@ -1,14 +1,18 @@
 #include "Torch.h"
 #include "../launcher/Display.h"
 
-Torch::Torch(int x, int y, int width, int height, const char* path, SDL_Renderer* renderer): 
-	GameObject(x, y, width, height, path, renderer){
+Torch::Torch(int x, int y, int width, int height, const char* path, SDL_Renderer* renderer, const char* objectName):
+	GameObject(x, y, width, height, path, renderer, objectName){
 
-	_clipRects = new SDL_Rect[2];
+	_clipRects = new SDL_Rect[5];
 	_clipRects[0] = { 0, 0, 32, 32 };
 	_clipRects[1] = { 32, 0, 32, 32 };
+	_clipRects[2] = { 32*2, 0, 32, 32 };
+	_clipRects[3] = { 32*3, 0, 32, 32 };
+	_clipRects[4] = { 32*4, 0, 32, 32 };
 
-	setAnimationClipRects(_clipRects, 2);
+	setAnimationClipRects(_clipRects, 5);
+	_animationSpeed = 20;
 
 	lightPosX = _x;
 	lightPosY = _y;

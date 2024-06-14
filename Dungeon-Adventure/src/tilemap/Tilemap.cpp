@@ -44,7 +44,6 @@ Tilemap::~Tilemap() {
 void Tilemap::tick() {
 }
 
-
 void Tilemap::render(int playerWorldX, int playerWorldY, int playerWidth, int playerHeight, const std::vector<LightEmitter*>& lightEmitters) {
 	for (int i = 0; i < _mapRows; i++) {
 		for (int j = 0; j < _mapCols; j++) {
@@ -85,7 +84,9 @@ void Tilemap::render(int playerWorldX, int playerWorldY, int playerWidth, int pl
 			}
 		}
 	}
+}
 
+void Tilemap::renderMinimap(int playerWorldX, int playerWorldY) {
 	for (int i = 0; i < _mapRows; i++) {
 		for (int j = 0; j < _mapCols; j++) {
 			int minimapWidth = _mapCols * 2;
@@ -109,8 +110,6 @@ void Tilemap::render(int playerWorldX, int playerWorldY, int playerWidth, int pl
 
 	float playerPosXMinimap = playerWorldTileX * 2;
 	float playerPosYMinimap = playerWorldTileY * 2;
-
-	std::cout << playerWorldTileY << ", " << playerWorldTileY << std::endl;
 
 	SDL_Rect rect = { playerPosXMinimap, playerPosYMinimap, 2, 2 };
 	SDL_RenderFillRect(_renderer, &rect);

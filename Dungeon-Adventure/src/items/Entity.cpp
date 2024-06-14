@@ -6,8 +6,8 @@
 #include "../tilemap/Tilemap.h"
 
 SDL_Renderer* Entity::_renderer;
-Entity::Entity(int x, int y, int width, int height, const char* path, SDL_Renderer* renderer): _x(x), _y(y), _width(width),
-_height(height), _entityImage(nullptr){
+Entity::Entity(int x, int y, int width, int height, const char* path, SDL_Renderer* renderer, const char* name): _x(x), _y(y), _width(width),
+_height(height), _entityImage(nullptr), name(name) {
 
 	_renderer = renderer;
 	_currentClipRect = { 0, 0, 0, 0 };
@@ -17,9 +17,8 @@ _height(height), _entityImage(nullptr){
 	_directions[1] = 'R';
 	_directions[2] = 'U';
 	_directions[3] = 'D';
-	_directions[3] = 'X';
 
-	_currentDirection = 'X';
+	_currentDirection = 'D';
 
 	_leftAnimationRects = nullptr;
 	_rightAnimationRects = nullptr;
@@ -39,10 +38,46 @@ _height(height), _entityImage(nullptr){
 	_animationSpeed = 10; // Default animation speed for all game objects. Can change using the animation speed setter function.
 	_maxFrames = 0;
 	_currentFrame = 0;
+
+	_textureModTimer = 0;
+	_alphaModTimer = 0;
+	_maxModTime = 0;
 }
 
 Entity::~Entity() {
 	SDL_DestroyTexture(_entityImage);
+}
+
+void Entity::render(const int& playerX, const int& playerY, const int& playerWidth, const int& playerHeight, std::vector<LightEmitter*>& lightEmitters) {
+	// PASS
+}
+
+void Entity::updateTextureMods() {
+	if (_maxModTime != 0) {
+		std::cout << "Applying mod" << std::endl;
+		_textureModTimer++;
+		SDL_SetTextureColorMod(_entityImage, _currentModR, _currentModG, _currentModB);
+
+		if (_textureModTimer > _maxModTime) {
+			_textureModTimer = 0;
+			_maxModTime = 0;
+			std::cout << "STOPPED!" << std::endl;
+		}
+	}
+}
+
+void Entity::setTextureModulation(char r, char g, char b, int time) {
+	_currentModR = r;
+	_currentModG = g;
+	_currentModB = b;
+	_maxModTime = time;
+
+	// TODO
+	SDL_SetTextureColorMod(_entityImage, r, g, b);
+}
+
+void Entity::setTextureAlphaModulation(char a, int time) {
+	// TODO
 }
 
 void Entity::setDirectionAnimationClipRects(SDL_Rect* left, SDL_Rect* right, SDL_Rect* up, SDL_Rect* down, int frames) {
@@ -110,7 +145,38 @@ CollisionAxes Entity::checkCollision(Tilemap* tileMap, int& dx, int& dy) {
 	return type;
 }
 
-CollisionAxes Entity::checkCollision(const Entity& another, int& dx, int& dy) {
-	return CollisionAxes();
+
+CollisionAxes Entity::checkCollision(GameObject* object, int& dx, int& dy) {
+	CollisionAxes axes;
+
+	int entityWorldX = _x;
+	int entityWorldY = _y;
+	int objectWorldX = object->getXPos();
+	int objectWorldY = object->getYPos();
+
+	float entityWorldXNew = entityWorldX + dx;
+	if (!(entityWorldXNew + _collideRect.x +  _collideRect.w < objectWorldX || entityWorldXNew + _collideRect.x > objectWorldX + object->getWidth() ||
+		(entityWorldY + _collideRect.y) + _collideRect.h < object->getYPos() || entityWorldY + _collideRect.y > object->getYPos() + object->getHeight())) {
+		axes.xCollision = true;
+	}
+	float entityWorldYNew = entityWorldY + dy;
+	if (!(entityWorldX + _collideRect.x + _collideRect.w < objectWorldX || entityWorldX + _collideRect.x > objectWorldX + object->getWidth() ||
+		(entityWorldYNew + _collideRect.y) + _collideRect.h < object->getYPos() || entityWorldYNew + _collideRect.y > object->getYPos() + object->getHeight())) {
+		axes.yCollision = true;
+	}
+
+	return axes;
 }
 
+int Entity::getXPos() const {
+	return _x;
+}
+int Entity::getYPos() const {
+	return _y;
+}
+int Entity::getWidth() const {
+	return _width;
+}
+int Entity::getHeight() const {
+	return _height;
+}

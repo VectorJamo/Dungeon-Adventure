@@ -2,6 +2,8 @@
 #include <SDL.h>
 #include <SDL_image.h>
 
+#include <vector>
+
 class GameObject {
 protected:
 	static SDL_Renderer* _renderer;
@@ -14,14 +16,19 @@ protected:
 	int _animationCounter, _animationSpeed, _maxFrames, _currentFrame;
 
 public:
-	GameObject(int x, int y, int width, int height, const char* path, SDL_Renderer* renderer);
-	~GameObject();
+	const char* objectName;
 
-	virtual void tick() = 0;
-	virtual void render(const int& playerX, const int& playerY, const int& playerWidth, const int& playerHeight) = 0;
+public:
+	GameObject(int x, int y, int width, int height, const char* path, SDL_Renderer* renderer, const char* objectName);
+	~GameObject();
 
 	void playAnimation();
 	void setAnimationClipRects(SDL_Rect* animationClipRects, int frames);
 	void setAnimationSpeed(int animationSpeed);
+
+	int getXPos() const;
+	int getYPos() const;
+	int getWidth() const;
+	int getHeight() const;
 };
 
