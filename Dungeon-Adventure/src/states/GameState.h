@@ -29,8 +29,8 @@ private:
 	std::vector<Entity*> _entities;
 
 	std::vector<Torch*> _torches;
+	std::vector<Spike*> _spikes;
 	Map* _map;
-	Spike* _spike;
 	std::vector<Cockroach*> _roaches;
 	
 	// UI

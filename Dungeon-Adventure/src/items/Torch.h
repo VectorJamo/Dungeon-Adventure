@@ -12,5 +12,6 @@ public:
 	~Torch();
 
 	void tick();
+	void render(const int& playerX, const int& playerY, const int& playerWidth, const int& playerHeight, const std::vector<LightEmitter*>& lightEmitters);
 	void render(const int& playerX, const int& playerY, const int& playerWidth, const int& playerHeight);
 };

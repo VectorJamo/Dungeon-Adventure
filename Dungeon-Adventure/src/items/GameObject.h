@@ -4,6 +4,8 @@
 
 #include <vector>
 
+class LightEmitter;
+
 class GameObject {
 protected:
 	static SDL_Renderer* _renderer;
@@ -22,6 +24,8 @@ public:
 	GameObject(int x, int y, int width, int height, const char* path, SDL_Renderer* renderer, const char* objectName);
 	~GameObject();
 
+	virtual void tick() = 0;
+	virtual void render(const int& playerX, const int& playerY, const int& playerWidth, const int& playerHeight, const std::vector<LightEmitter*>& lightEmitters) = 0;
 	void playAnimation();
 	void setAnimationClipRects(SDL_Rect* animationClipRects, int frames);
 	void setAnimationSpeed(int animationSpeed);

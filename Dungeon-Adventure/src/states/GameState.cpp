@@ -28,20 +28,38 @@ GameState::GameState(SDL_Renderer* renderer,  bool* gameStatus): StateManager(re
 	_fontSmallLight = new gui::Font("res/fonts/roboto/Roboto-Light.ttf", 18);
 	
 	// Game Objects
-	_torches.reserve(10);
-	_torches.push_back(new Torch(45 * _tileMap->getTileSize(), 40 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
-	_torches.push_back(new Torch(9 * _tileMap->getTileSize(), 20 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
-	_torches.push_back(new Torch(9 * _tileMap->getTileSize(), 40 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
-	_torches.push_back(new Torch(9 * _tileMap->getTileSize(), 60 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
-	_torches.push_back(new Torch(9 * _tileMap->getTileSize(), 80 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
-	_torches.push_back(new Torch(31 * _tileMap->getTileSize(), 20 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
-	_torches.push_back(new Torch(31 * _tileMap->getTileSize(), 30 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+	_torches.reserve(100);
+	_torches.emplace_back(new Torch(49 * _tileMap->getTileSize(), 45 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+	_torches.emplace_back(new Torch(50 * _tileMap->getTileSize(), 45 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+
+	_torches.emplace_back(new Torch(29 * _tileMap->getTileSize(), 37 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+	_torches.emplace_back(new Torch(29 * _tileMap->getTileSize(), 46 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+	_torches.emplace_back(new Torch(31 * _tileMap->getTileSize(), 15 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+	_torches.emplace_back(new Torch(31 * _tileMap->getTileSize(), 30 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+	_torches.emplace_back(new Torch(37 * _tileMap->getTileSize(), 34 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+	_torches.emplace_back(new Torch(16 * _tileMap->getTileSize(), 42 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+	_torches.emplace_back(new Torch(82 * _tileMap->getTileSize(), 28 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+	_torches.emplace_back(new Torch(74 * _tileMap->getTileSize(), 16 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+	_torches.emplace_back(new Torch(56 * _tileMap->getTileSize(), 62 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+	_torches.emplace_back(new Torch(65 * _tileMap->getTileSize(), 69 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+	_torches.emplace_back(new Torch(58 * _tileMap->getTileSize(), 76 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+
+	for (int i = 1; i < 10; i++) {
+		_torches.emplace_back(new Torch(50 * _tileMap->getTileSize(), i * 10 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+		_torches.emplace_back(new Torch(i * 10 * _tileMap->getTileSize(), 50 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+
+		_torches.emplace_back(new Torch(10*i * _tileMap->getTileSize(), 9 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+		_torches.emplace_back(new Torch(10*i * _tileMap->getTileSize(), 90 * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+		_torches.emplace_back(new Torch(9 * _tileMap->getTileSize(), 10*i * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+		_torches.emplace_back(new Torch(90 * _tileMap->getTileSize(), 10 * i * _tileMap->getTileSize(), 64, 64, "res/images/tiles/torch-sprite.png", _renderer, "torch"));
+	}
 
 	for (Torch* torch : _torches)
 		_lightEmitters.push_back(torch);
 
 	_map = new Map(42 * _tileMap->getTileSize(), 47 * _tileMap->getTileSize(), 32, 32, "res/images/map.png", _renderer, "map");
-	_spike = new Spike(40 * _tileMap->getTileSize(), 47 * _tileMap->getTileSize(), 32, 32, "res/images/spike-sprite.png", _renderer, "spike");
+
+	_spikes.emplace_back(new Spike(40 * _tileMap->getTileSize(), 47 * _tileMap->getTileSize(), 32, 32, "res/images/spike-sprite.png", _renderer, "spike"));
 
 	_roaches.reserve(5);
 	_roaches.push_back(new Cockroach(56 * _tileMap->getTileSize(), 47 * _tileMap->getTileSize(), 22, 22, "res/images/roach.png", _renderer, _tileMap, "roach"));
@@ -51,7 +69,9 @@ GameState::GameState(SDL_Renderer* renderer,  bool* gameStatus): StateManager(re
 	_roaches.push_back(new Cockroach(56 * _tileMap->getTileSize(), 47 * _tileMap->getTileSize(), 22, 22, "res/images/roach.png", _renderer, _tileMap, "roach"));
 
 	_gameObjects.push_back(_map);
-	_gameObjects.push_back(_spike);
+
+	for (auto& spike : _spikes)
+		_gameObjects.push_back(spike);
 
 	for(auto& roach: _roaches)
 		_entities.push_back(roach);
@@ -88,7 +108,9 @@ void GameState::tick() {
 	// Update gameObjects
 	for(Torch* torch: _torches)
 		torch->tick();
-	_spike->tick();
+	
+	for (auto* spike : _spikes)
+		spike->tick();
 
 	// Update the entities
 	_player->tick(_gameObjects, _entities);
@@ -108,9 +130,10 @@ void GameState::render() {
 		torch->render(_player->getXPos(), _player->getYPos(), _player->getWidth(), _player->getHeight());
 	
 	if(!_player->_hasMap)
-		_map->draw(_lightEmitters, _player->getXPos(), _player->getYPos(), _player->getWidth(), _player->getHeight());
-
-	_spike->render(_player->getXPos(), _player->getYPos(), _player->getWidth(), _player->getHeight(), _lightEmitters);
+		_map->render(_player->getXPos(), _player->getYPos(), _player->getWidth(), _player->getHeight(), _lightEmitters);
+	
+	for(auto& spike: _spikes)
+		spike->render(_player->getXPos(), _player->getYPos(), _player->getWidth(), _player->getHeight(), _lightEmitters);
 	
 	// Render the entities
 	for (auto& entity : _entities)

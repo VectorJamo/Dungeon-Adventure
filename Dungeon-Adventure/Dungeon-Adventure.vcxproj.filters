@@ -72,6 +72,9 @@
     <ClCompile Include="src\items\Cockroach.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\items\Sword.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\gui\Button.h">
@@ -135,6 +138,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\items\Cockroach.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\items\Sword.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -339,6 +345,18 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="res\images\roach-attacked.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\itsmars_Inventory.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\scroll_1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\scroll.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\images\WeaponsSpriteSheet.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

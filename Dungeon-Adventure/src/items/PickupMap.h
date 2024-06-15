@@ -13,6 +13,6 @@ public:
 	~Map();
 
 	void tick();
-	void draw(const std::vector<LightEmitter*>& lightEmitters, int playerX, int playerY, int playerWidth, int playerHeight);
+	void render(const int& playerX, const int& playerY, const int& playerWidth, const int& playerHeight, const std::vector<LightEmitter*>& lightEmitters);
 };
 

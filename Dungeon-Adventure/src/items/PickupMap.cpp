@@ -13,7 +13,7 @@ void Map::tick() {
 
 }
 
-void Map::draw(const std::vector<LightEmitter*>& lightEmitters, int playerX, int playerY, int playerWidth, int playerHeight) {
+void Map::render(const int& playerX, const int& playerY, const int& playerWidth, const int& playerHeight, const std::vector<LightEmitter*>& lightEmitters) {
 	int mapWorldX = _x;
 	int mapWorldY = _y;
 	int mapScreenX = mapWorldX - ((playerX + playerWidth / 2) - Display::getWidth() / 2);

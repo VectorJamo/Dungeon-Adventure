@@ -74,6 +74,7 @@ Player::Player(int x, int y, int width, int height, const char* path, SDL_Render
 
 	// state variables
 	_hasMap = false;
+	_hasSword = false;
 
 	_fontLarge = new gui::Font("res/fonts/roboto/Roboto-Thin.ttf", 48);
 	_fontSmall = new gui::Font("res/fonts/roboto/Roboto-Thin.ttf", 28);

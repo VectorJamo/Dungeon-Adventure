@@ -134,6 +134,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\items\Sword.cpp" />
     <ClCompile Include="src\items\Cockroach.cpp" />
     <ClCompile Include="src\items\Spike.cpp" />
     <ClCompile Include="src\items\PickupMap.cpp" />
@@ -155,6 +156,7 @@
     <ClCompile Include="src\gui\TempText.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\items\Sword.h" />
     <ClInclude Include="src\items\Cockroach.h" />
     <ClInclude Include="src\items\Spike.h" />
     <ClInclude Include="src\items\InventoryItem.h" />
@@ -211,9 +213,12 @@
     <Image Include="res\images\health\4.png" />
     <Image Include="res\images\health\5.png" />
     <Image Include="res\images\health\6.png" />
+    <Image Include="res\images\itsmars_Inventory.png" />
     <Image Include="res\images\map.png" />
     <Image Include="res\images\roach-attacked.png" />
     <Image Include="res\images\roach.png" />
+    <Image Include="res\images\scroll.png" />
+    <Image Include="res\images\scroll_1.png" />
     <Image Include="res\images\Soldier-Blue.png" />
     <Image Include="res\images\Soldier-Red.png" />
     <Image Include="res\images\spike-animation.png" />
@@ -262,6 +267,7 @@
     <Image Include="res\images\tiles\torch2.png" />
     <Image Include="res\images\tiles\wall.png" />
     <Image Include="res\images\tiles\wall2.jpg" />
+    <Image Include="res\images\WeaponsSpriteSheet.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

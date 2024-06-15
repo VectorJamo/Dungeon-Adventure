@@ -33,6 +33,8 @@ private:
 	std::vector<InventoryItem*> _inventoryItems;
 	gui::Font* _fontSmall, *_fontLarge;
 
+	bool _hasSword;
+
 public:
 	bool _hasMap;
 

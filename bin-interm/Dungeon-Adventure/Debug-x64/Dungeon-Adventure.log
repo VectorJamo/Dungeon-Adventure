@@ -1,9 +1,2 @@
-﻿  GameState.cpp
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\GameState.cpp(12,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\GameState.cpp(17,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\GameState.cpp(61,45): warning C4309: 'argument': truncation of constant value
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\GameState.cpp(61,40): warning C4309: 'argument': truncation of constant value
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\GameState.cpp(61,35): warning C4309: 'argument': truncation of constant value
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\GameState.cpp(61,30): warning C4309: 'argument': truncation of constant value
-C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\Dungeon-Adventure\Dungeon-Adventure\src\states\GameState.cpp(65,48): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+﻿  Player.cpp
   Dungeon-Adventure.vcxproj -> C:\Users\neupane-suraj\Desktop\Projects\C++ Projects\Dungeon-Adventure\bin\Dungeon-Adventure\Debug-x64\Dungeon-Adventure.exe

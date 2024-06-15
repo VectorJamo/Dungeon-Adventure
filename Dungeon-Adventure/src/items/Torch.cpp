@@ -30,6 +30,10 @@ void Torch::tick() {
 	lightPosY = _y;
 }
 
+void Torch::render(const int& playerX, const int& playerY, const int& playerWidth, const int& playerHeight, const std::vector<LightEmitter*>& lightEmitters) {
+	// PASS
+}
+
 void Torch::render(const int& playerX, const int& playerY, const int& playerWidth, const int& playerHeight) {
 	int torchWorldX = _x;
 	int torchWorldY = _y;
